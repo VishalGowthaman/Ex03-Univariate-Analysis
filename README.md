@@ -8,23 +8,92 @@
     
 # Algorithm
 
-### Step1
-    Read the given data.
+## Step1
+Read the given data.
     
-### Step2
-    Get the information about the data.
+## Step2
+Get the information about the data.
     
-### Step3
-    Remove the null values from the data.
+## Step3
+Remove the null values from the data.
 
-### Step4
-    Mention the datatypes from the data.
+## Step4
+Mention the datatypes from the data.
     
-### Step5
-    Count the values from the data.
+## Step5
+Count the values from the data.
     
-### Step6
-    Do plots like boxplots,countplot,distribution plot,histogram plot.
+## Step6
+Do plots like boxplots,countplot,distribution plot,histogram plot.
     
 # Program
+```
+Developed by : VISHAL GOWTHAMAN K R
+Registration Number : 212221230123
+```
+```
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+df=pd.read_csv('superstore.csv')
+df
+
+df.head()
+df.info()
+df.describe()
+df.isnull().sum()
+
+df.dtypes
+
+df['Postal Code'].value_counts()
+
+sns.boxplot(x='Postal Code', data=df)
+sns.countplot(x='Postal Code',data=df)
+sns.distplot(df["Postal Code"])
+sns.histplot(x='Postal Code',data=df)
+```
+
+# Output
+
+DATA
+![](./1.png)
+ 
+DATA HEAD
+![](./2.png)
+
+DATA INFORMATION
+![](./3.png)
+
+DATA DESCRIBE
+![](./4.png)
+
+DATA NULL VALUES
+![](./5.png)
+
+DATA'S DATATYPES
+![](./6.png)
+
+DATA'S VALUECOUNT
+![](./7.png)
+
+BOXPLOT
+![](./8.png)
+
+COUNTPLOT
+![](./9.png)
+
+DISTRIBUTION PLOT
+![](./10.png)
+
+HISTOGRAM PLOT
+![](./11.png)
+
+# Result
+Thus we have read the given data and performed the univariate analysis with different types of plots.
+
+
+
+
+
     
